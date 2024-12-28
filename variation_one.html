@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        /* how my nav1 looks like simply fot visualization add border to the nav container */
+        .nav1 {
+            /* border: 2px solid red; */
+            background-color: #eaeef1;
+            padding: 10px;
+
+        }
+
+        .nav1 ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav1 li {
+            display: inline;
+            /* inline element, it is a good practice*/
+        }
+
+        .nav1 a {
+            text-decoration: none;
+            color: #362e2e;
+            /* background-color: rgb(176, 103, 8); */
+            padding: 5px 15px;
+            position: relative;
+        }
+
+        /* styling on hover */
+        .nav1 a::after {
+            content: "";
+            position: absolute; /* absolute to the parent element */
+            height: 2px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            background-color: #00728f;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .nav1 a:hover::after {
+            /* transition properties  */
+            transform: scaleX(1);
+        }
+
+        .nav1 .login-btn {
+            background-color: #00728f;
+            color: #fff;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-container">
+        <h2>Variation 1: Horizontal with underline effect</h2>
+        <nav class="nav1">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><button class="login-btn">Login</button></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>
